@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "9e467937-cffe-47a6-b0cf-893140f4d9c8",
+		"name": "Crud Produtos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29608769",
+		"_collection_link": "https://www.postman.com/spaceflight-geoscientist-86412474/workspace/laravel-test/collection/29608769-9e467937-cffe-47a6-b0cf-893140f4d9c8?action=share&source=collection_link&creator=29608769"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/api/v1/produtos/listar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/produtos/listar",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"produtos",
+						"listar"
+					]
+				},
+				"description": "Lista todos os produtos com paginação."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/produtos/cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"Tablet Samsung\",\n    \"descricao\":\"Tablet 10 polegadas com a nova S Pen\",\n    \"preco\":\"2100.00\",\n    \"quantidade\":\"5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/produtos/cadastrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"produtos",
+						"cadastrar"
+					]
+				},
+				"description": "Cadastra um produto"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/produtos/atualizar/1",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"Tablet Samsung 10\",\n    \"descricao\":\"Tablet 10 polegadas com a nova S Pen\",\n    \"preco\":\"2100.00\",\n    \"quantidade\":\"5\"\n   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/produtos/atualizar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"produtos",
+						"atualizar",
+						"1"
+					]
+				},
+				"description": "Atualiza o produto pelo id"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/produtos/deletar/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/produtos/deletar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"produtos",
+						"deletar",
+						"1"
+					]
+				},
+				"description": "Deletar o produto pelo id."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/produtos/listar/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/produtos/listar/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"produtos",
+						"listar",
+						"1"
+					]
+				},
+				"description": "Listar produto por ID."
+			},
+			"response": []
+		}
+	]
+}

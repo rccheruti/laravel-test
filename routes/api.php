@@ -3,17 +3,20 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\ProdutosController;
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('v1')->group(function () {
+    // Rota que passa por auth ou não, como não foi solicitado não implementei a autenticação
+    Route::middleware('guest')->group(function () {
+        // Rota de listagem com paginação
+        Route::get('produtos/listar',[ProdutosController::class, 'index']);
+        // Rota de listagem por ID
+        Route::get('produtos/listar/{id}',[ProdutosController::class, 'show']);
+        // Rota de cadastro
+        Route::post('produtos/cadastrar/',[ProdutosController::class,'store']);
+        // Rota de atualização do produto via ID
+        Route::patch('produtos/atualizar/{id}',[ProdutosController::class,'update']);
+        // Rota para deletar o produto via ID
+        Route::delete('produtos/deletar/{id}',[ProdutosController::class,'destroy']);
+    });
 });
