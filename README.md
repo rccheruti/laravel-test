@@ -83,6 +83,15 @@ php artisan serve
 > ```dosini
 > /api/v1/produtos/deletar/{id}
 >```
+***
+## Teste
+
+Para rodar o teste, abra o terminal na pasta do projeto e digite o comando a seguir:
+
+```sh
+php artisan test
+```
+O resultado esperado é 3 testes com sucesso.
 
 ***
 
