@@ -59,7 +59,7 @@ class ProdutosController extends Controller
 
         $produtos->save();        
 
-        return $this->response('Produto cadastrado com sucesso!', 200);
+        return $this->response('Produto cadastrado com sucesso!', 201, [$produtos]);
     }
 
     // Atualiza qualquer campo válido do produto pelo seu ID
@@ -76,7 +76,7 @@ class ProdutosController extends Controller
     {
         Produtos::destroy($id);
 
-        return $this->response('Produto excluído com sucesso!', 200, [$id]);
+        return $this->response('Produto excluído com sucesso!', 200, ['ID do produto excluído:' => $id]);
     }
 
 }
